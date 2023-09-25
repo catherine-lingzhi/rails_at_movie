@@ -1,0 +1,15 @@
+<h2 class="title is-2"><%= @production_company.name %></h2>
+<p>
+  This production company <%= @production_company.movies.count %>
+  of the top 100 movies.
+</p>
+
+<h3>
+  Movies made by <%= @production_company.name %>
+</h3>
+<ul>
+  <% @production_company.movies.each do  |movie |%>
+  <li><%= link_to movie.title, movie %></li> with a rating of
+  <%= movie.average_vote %>
+  <% end %>
+</ul>
