@@ -1,10 +1,5 @@
 <h2>Top 100 Movies</h2>
 
 <ol class="ml-5">
-  <% @movies.each do | m | %>
-    <li>
-      <%= link_to m.title, m %> was produced by
-      <%= link_to m.production_company.name, m.production_company %>
-    </li>
-  <% end %>
+<%= render @movies %>
 </ol>
